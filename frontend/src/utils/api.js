@@ -5,7 +5,7 @@ const getResponse = (res) => {
 
 class Api {
     constructor(address) {
-      this._address = address;
+      this._address = process.env.BACKEND_APP_URL || 'https://api.mesto.sarkisov.nomorepartiessbs.ru';
     }
   
     setToken(token) {
@@ -139,7 +139,7 @@ class Api {
   }
   }
   // Замените на адрес вашего бэкенда
-  const api = new Api('http://localhost:3000');
+  const api = new Api();
   
   export default api;
   
